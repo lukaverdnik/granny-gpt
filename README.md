@@ -4,66 +4,84 @@ Granny GPT – A fun AI grandma that talks, slides into view when speaking, and 
 
 
 
-# 👵 Granny GPT
+# GrannyGPT
 
-Granny GPT is a fun little project that makes an AI-powered grandma who:
-- Talks with TTS (text-to-speech)
-- Slides onto the screen when she speaks (for OBS streaming/recording with chroma key)
-- Can guess images (including silly stuff like “cows on a skateboard”)
-- Lets you drag & drop PNGs for her to hold
-- Remembers and learns new words if she doesn’t know them
-- Has Easter eggs (try entering special names 😉)
-
-Inspired by **Failboat** and made for fun!
+GrannyGPT is a fun, experimental Python project where "Granny" can talk, answer questions, and even guess objects/images you show her.  
+She can be used for streams, recordings, or just for fun.
 
 ---
 
-## 📥 Installation
+## ✨ Features
+- **Talking Granny** — She speaks out whatever you type or say.
+- **Voice Input** — Talk to her with your microphone.  
+- **Text Input** — No mic? Type instead.
+- **Sliding Animation** — Granny slides into frame when talking and slides out when quiet.
+- **Custom Images** — Drag & drop or replace `granny.png` to give her a new look.  
+- **Smarter Over Time** — She "learns" new guesses when you teach her.  
+- **Fun References** — Includes silly objects, characters, and even absurd guesses like "cow on a skateboard".  
+- **Chroma Key Ready** — Background is solid for OBS streaming.
 
-1. Install [Python 3.11](https://www.python.org/downloads/release/python-3110/)  
-   (⚠️ Do not use 3.12+ yet, compatibility issues)
+---
 
-2. Install required libraries:
-   ```bash
-   pip install TTS simpleaudio pillow opencv-python tkinter
-Download this repo (green Code → Download ZIP) or clone:
+## 📦 Installation
 
-git clone https://github.com/lukaverdnik/granny-gpt.git
+### 1. Install Python
+- [Download Python 3.11](https://www.python.org/downloads/release/python-3116/)  
+  (Make sure to check **"Add to PATH"** during installation)
 
+### 2. Install Dependencies
+Open **CMD** in the project folder and run:
 
-Place your granny.png image inside the project folder (already included with default one).
+```sh
+pip install TTS
+pip install SpeechRecognition
+pip install pyaudio
+pip install pillow
 
-Run Granny:
+⚠️ If pyaudio fails to install on Windows:
+
+Go here: [Unofficial PyAudio builds](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio)
+
+Download the version for Python 3.11 x64
+
+Install with:
+
+pip install PyAudio-0.2.11-cp311-cp311-win_amd64.whl
+
+▶️ Running Granny
+
+Start Granny with:
 
 python main.py
 
-🎮 Features
 
-Talking Granny → type or speak into your mic, she responds.
+On first launch, enter your name.
 
-OBS Ready → background is a solid color for easy chroma key.
+Granny will greet you and start in "off-screen" mode.
 
-Learning Mode → if she doesn’t know something, she asks and remembers it.
+When she speaks, she will slide into frame.
 
-Drag & Drop PNGs → she will hold the dropped image in her hands.
+When silent, she slides back out.
 
-📝 Rules
+🎨 Customization
 
-You can share and play around with this.
+(this is only if you want to) Replace granny.png with your own PNG (keep it around 539x420 px for best fit).
 
-Please don’t repost without credit.
+Drag & drop a PNG into her window to make her hold it.
 
-If GitHub takes it down, reposting is allowed.
+📜 Credits
 
-🐛 Bug Reports
+Project Author: Luka
 
-If you find any bugs, glitches, or funny issues, email me here:
-📧 verdnikluka2016@gmail.com
+Inspired by fun experiments with TTS and object recognition.
 
-🙌 Credits
+Thanks to open-source libraries like TTS, SpeechRecognition, and Pillow.
 
-Project creator: Luka
+🐛 Bugs & Feedback
 
-Inspiration: Failboat
+If you find a bug, please report it to:
+📧 your-email@example.com
 
-Granny PNG art: placeholder (replaceable by users)
+📺 Streaming
+
+Use OBS with a Chroma Key filter to remove the background and put Granny into your streams.
